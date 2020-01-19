@@ -1,0 +1,9 @@
+https://www.hackerrank.com/challenges/magic-square-forming/problem
+https://www.hackerrank.com/challenges/queens-attack-2/problem
+https://practice.geeksforgeeks.org/problems/largest-subarray-of-0s-and-1s/1/?track=md-arrays&batchId=144
+https://www.hackerrank.com/challenges/lilys-homework/problem
+https://practice.geeksforgeeks.org/problems/inversion-of-array/0/?track=md-arrays&batchId=144
+
+https://www.hackerrank.com/challenges/separate-the-numbers/problem
+https://www.hackerrank.com/challenges/two-characters/problem
+https://www.codechef.com/problems/PTOSS

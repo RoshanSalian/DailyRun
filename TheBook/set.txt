@@ -1,0 +1,21 @@
+//set
+//set based on balanced binary tree O(logn), unordered set based on hashing O(1)
+set<int>s;
+
+s.insert(2);
+s.insert(5);
+
+s.count(3) // count of element 3, here 0
+s.count(2) //count of element 2, here 1
+
+s.erase(3)
+
+s.size()
+
+for(auto x:s){
+  cout << x;
+}
+
+
+//multiset, contins multiple onstance of element
+multiset<int>s;

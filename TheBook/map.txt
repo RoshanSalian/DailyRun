@@ -1,0 +1,11 @@
+//map
+//ordered O(logn) unordered O(1)
+
+map<string, int> m;
+m["monkey"] = 4;
+
+m.count("monkey")
+
+for(auto x:m){
+  cout << x;
+}

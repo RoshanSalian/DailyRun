@@ -1,0 +1,9 @@
+priority_queue<int>q;
+q.push(3);
+q.push(4);
+q.push(7);
+q.push(1);
+
+q.top() //7
+q.pop();
+q.top(); //4

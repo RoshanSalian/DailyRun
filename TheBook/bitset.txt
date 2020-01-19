@@ -1,0 +1,9 @@
+bitset<10>s(string("0110101110")); // strores right to left
+cout << s[4] << endl; 0
+cout << s[5] << endl; 1
+
+s.count() //returns number of 1s x
+
+//store string in bit set and perform logical operation
+
+cout << a&b; //and of bit of string

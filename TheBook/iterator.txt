@@ -1,0 +1,15 @@
+//iterator
+//.begin() points to first element, .end() points to position after last element(out of range)
+
+sort(v.begin(), v.end());
+reverse(v.begin(), v.end());
+
+
+equivalently
+sort(v.rbegin(), v.rend());
+
+set<int>::iterator it = s.begin()  ===== auto it = s.begin();cout<< *it <<endl;
+for(auto x :s){cout << x;}
+
+auto x = s.find(t);//if t not found, x points to end of array
+if(x == s.end()){elem not found;}

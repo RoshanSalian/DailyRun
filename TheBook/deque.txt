@@ -1,0 +1,6 @@
+deque<int>d;
+
+d.push_back(1);
+d.push_front(4);
+d.pop_back();
+d.pop_front();

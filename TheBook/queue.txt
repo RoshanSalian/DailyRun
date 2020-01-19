@@ -1,0 +1,5 @@
+queue<int>q;
+
+q.push(3);
+q.front();
+q.pop();

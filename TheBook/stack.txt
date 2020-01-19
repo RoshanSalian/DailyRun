@@ -1,0 +1,5 @@
+stack<int> s;
+
+s.push(2);
+s.pop();
+s.top();
