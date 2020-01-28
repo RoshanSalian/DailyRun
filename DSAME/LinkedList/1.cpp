@@ -1,90 +1,87 @@
-//Stack using LinkedList
-
 #include<bits/stdc++.h>
 using namespace std;
+////
 
-struct Linked{
+//Works only for global head  
+
+/////
+
+struct LinkedL{
   int data;
-  struct Linked *next;
+  struct LinkedL *next;
 };
+struct LinkedL *head;
+void push(){
+  cout << "Push \n";
+  struct LinkedL *current, *newn;
+  newn = (LinkedL *)malloc(sizeof(struct LinkedL));
+  int temp; cout << "Data: ";  cin >> temp;
+  newn->data=temp;
+  newn->next=NULL;
 
-void pushL(struct Linked *head){
-  long d;
-  struct Linked *newNode, *p, *q, *current;
-
-  cin >> d;
-  newNode = (Linked *)malloc(sizeof(struct Linked));
-  newNode->data=d;
-  newNode->next=NULL;
-  if(head->next==NULL){
-    head->next = newNode;
+  if(head==NULL){
+    //cout << "if" <<endl;
+    head = newn;
   }
   else{
-    current = head->next;
-    while(current->next!=NULL){
-      current=current->next;
-    }
-    current->next=newNode;
+    //cout <<"else" << endl;
+    newn->next = head;
+    head = newn;
   }
-  // return 1;
+
+  ////////////
+
 }
 
-void popL(struct Linked *head){
-  long d;
-  struct Linked *newNode, *p, *q, *current;
-  // cout<<"start"<<endl;
-  if(head->next==NULL){
-    // cout<<"if"<<endl;
-    cout << "Stack Empty\n";
+void pop(){
+  cout << "Pop"<<endl;
+  if(head==NULL){
+    cout << "Empty \n";
   }
   else{
-    // cout<<"else"<<endl;
-    current = head->next;
-    while(current->next->next!=NULL){
-      // cout <<current->data << " ";
-      current=current->next;
-    }
-    cout<<"Popped "<<current->next->data <<endl;
-    p = current->next;
-    current->next=NULL;
-    free(p); // check
-
+    cout << head->data;
+    head = head->next;
   }
-  // return 1;
 }
 
-int printL(struct Linked *head){
-  struct Linked *newNode, *p, *q, *current;
-  current=head->next;
-  while(current->next!=NULL){
-    cout << current->data << " ";
+void top(){
+  cout << "Top"<<endl;
+  if(head==NULL){
+    cout << "Empty"<<endl;
+  }
+  else{
+    cout << head->data<<endl;
+  }
+}
+
+void display(){
+  cout << "Display"<<endl;
+  struct LinkedL *current;
+  current = (LinkedL *)malloc(sizeof(struct LinkedL));
+  current = head;
+  while(current!=NULL){
+    //cout << "in";
+    cout << current->data<< " ";
     current = current->next;
   }
-  cout << current->data;
   cout << endl;
 }
 
 int main(){
-
-  struct Linked *head, *tail;
-  head->next=NULL;
-  int option=1;
-  while(1){
-    cin >> option;
-    if(option==1){
-      pushL(head);
-    }
-    else if(option==2){
-      popL(head);
-    }
-    else if(option==3){
-      printL(head);
-    }
-    else{
+  struct LinkedL *current;
+  int x=1;
+  while(x){
+    cout << "Choise: ";cin >> x;
+    switch(x){
+      case 1:push();
       break;
+      case 2:pop();
+      break;
+      case 3: top();
+      break;
+      case 4: display();
+      break;
+      case 0: x=0;
     }
   }
-  // pushL(head);
-  // popL(head);
-
 }

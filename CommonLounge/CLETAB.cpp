@@ -7,37 +7,21 @@ int main(){//Otimal page replacement. Did not solve
   cin >> t;
   while(t--){
     long n,m;
-    int cust[401]={0};
+    vector<long> cust[400]={0};
+    long long order[m]={0};
     cin >> n >> m;
-    long order[m+1];
-    long table[n+1]={0};
+    long order[m];
+    long table[n]={0};
 
+    long clean=0;
     for(int i=0;i<m;i++){
       long x;
-      cin >> x;
-      cust[x]++;
-      order[i]=x;
+      cin >> order[i];
     }
-    long empty=3, count=0;
+
     for(int i=0;i<m;i++){
-      if(empty)
-      for(int j=0;j<n;j++){
-        if(table[j]==0){
-          empty--;
-          table[j]=order[i];
-          count++;
-        }
-      }
-      else{
-
-      }
-
+      
     }
-
-
-
-
-
 
   }
 }
