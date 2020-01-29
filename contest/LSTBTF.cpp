@@ -4,7 +4,6 @@ using namespace std;
 int sos(long n){
   double rem=0;
   while(n){
-    // rem+=pow(n%10, 2);
     if(n%10 == 0){
       return 0;
     }
@@ -30,12 +29,7 @@ int main(){
     long n;
     cin >> n;
     long oper=pow(10, n-1);
-    // while(n){
-    //   oper=oper*;
-    //   n--;
-    // }
 
-    // cout << "Oper  : " << oper<<endl;
     while(1){
       // long temp=oper;
       if(sos(oper)){
