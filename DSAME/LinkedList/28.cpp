@@ -6,6 +6,8 @@ struct LinkedL{
   struct LinkedL *next;
 };
 
+//Not the perfect way
+
 void create(struct LinkedL **head){
   struct LinkedL *current;
   int times;
@@ -42,25 +44,20 @@ void display(struct LinkedL **head){
   cout << endl;
 }
 
-struct LinkedL* rev(struct LinkedL **head){ //Reverse Not Working
-  struct LinkedL *current, *icurrent, *p, *q;
-  current = *head;
-  p = NULL;
-  q = NULL;
-  if(current->next==NULL){
-    return p;
+void last(struct LinkedL **head){
+  if(*head==NULL){
+    return;
   }
   else{
-    while(current==NULL){
-
-      p = current->next;
-      current->next = q;
-      q = current;
-      current = p;
+    struct LinkedL *current, *p;
+    p=current = *head;
+    current=current->next;
+    if(current!=NULL){
+      last( &current );
+      //cout << (current->data) << endl;;
     }
+    cout << p->data << endl;
   }
-  display(&q);
-  return q;
 }
 
 int main(){
@@ -70,6 +67,5 @@ int main(){
   create(&head);
   display(&head);
 
-  current = rev(&head);
-  display(&current);
+  last(&head);
 }

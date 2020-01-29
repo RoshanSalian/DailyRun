@@ -6,6 +6,9 @@ struct LinkedL{
   struct LinkedL *next;
 };
 
+//Traverse for length and again for middle element
+//FASTER-- 2 Pointer. One pointer moves twice as fast as other
+
 void create(struct LinkedL **head){
   struct LinkedL *current;
   int times;
@@ -42,26 +45,20 @@ void display(struct LinkedL **head){
   cout << endl;
 }
 
-struct LinkedL* rev(struct LinkedL **head){ //Reverse Not Working
-  struct LinkedL *current, *icurrent, *p, *q;
-  current = *head;
-  p = NULL;
-  q = NULL;
-  if(current->next==NULL){
-    return p;
-  }
-  else{
-    while(current==NULL){
+void rev(struct LinkedL **head){
+  struct LinkedL *pt1, *pt2;
+  pt1 = pt2 = *head;
 
-      p = current->next;
-      current->next = q;
-      q = current;
-      current = p;
-    }
+  while(pt2!=NULL && pt2->next!=NULL){
+    pt1 = pt1->next;
+    pt2 = pt2->next->next;
+
   }
-  display(&q);
-  return q;
+
+  cout << pt1->data << "\n";
+
 }
+
 
 int main(){
   struct LinkedL *current, *icurrent, *p, *q, *newn, *head=NULL;
@@ -70,6 +67,5 @@ int main(){
   create(&head);
   display(&head);
 
-  current = rev(&head);
-  display(&current);
+  rev(&head);
 }
