@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){//https://www.hackerrank.com/challenges/cloudy-day/problem
+int main(){//https://www.hackerrank.com/challenges/cloudy-day/problemD
   long long n, temp;
   cin >> n;
   vector<pair<long, long>> pii;
