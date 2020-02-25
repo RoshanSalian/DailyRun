@@ -18,7 +18,7 @@ int main(){
       else if(s[i]=='D')cur.second--;
       else if(s[i]=='R')cur.first++;
       else cur.first--;
-      if(path.count(cur)){
+      if(path.count(cur)){  
         if(i-path[cur]+1<r-l+1){
           l = path[cur];
           r = i;
